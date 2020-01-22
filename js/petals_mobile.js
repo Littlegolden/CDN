@@ -1,5 +1,5 @@
 //樱花
-
+window.onload = function() {
 	var deviceWidth = document.documentElement.clientWidth;
 	// 计时
 	var num=0;
@@ -138,7 +138,7 @@
 			var sakuraList = new SakuraList();
 			
 			// i 密度
-			for(var i = 0; i < 10; i++) {
+			for(var i = 0; i < 5; i++) {
 				var sakura, randomX, randomY, randomS, randomR, randomFnx, randomFny;
 				randomX = getRandom('x');
 				randomY = getRandom('y');
@@ -191,3 +191,4 @@
 		var timeclock=setInterval("clock()",1000);
 				
 	}
+}
