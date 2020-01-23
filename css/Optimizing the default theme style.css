@@ -1,0 +1,352 @@
+/* Optimizing the default theme style */
+	/* Home page optimization ↓ */
+	/* Logo height in the upper left corner of the menu bar */
+	.Header-logo {
+		max-height: 25px !important;
+	}
+	
+	/* Pin left tab bar */
+	@media (min-width: 992px) {
+		.sideNav,
+		.sideNav>ul {
+			width: 190px;
+			position: sticky;
+			top: 80px;
+		}
+		.App {
+			overflow-x: visible;
+		}
+	}
+
+	/* Google sidebar ads on the right side of the stream */
+	li.item-flagrow-ad .sideads {
+		position: absolute;
+		left: 1120px;
+		top: 0;
+		width: 190px;
+	}
+		/* Adjust position based on screen width */
+	@media (max-width:1570px) and (min-width:1000px) {
+		.IndexPage .container {
+			margin-right: 20%;
+		}
+		.Hero .container, .UserDirectoryList .container { /* Protect Hero Banner from this change */
+		    margin-right: auto;
+		}
+	}
+
+	/* Search result keyword background color */
+	.DiscussionListItem-main mark {
+		background: #ffff80 !important;
+	}
+
+	/* Cookie div color */
+	a.cc-link:hover {
+		color: #E7672E !important;
+	}
+	.cc-message {
+		font-size: 12px;
+		white-space: pre-wrap;
+		line-height: initial;
+	}
+	
+	/* Discussion page optimization ↓ */
+	/* Highlight on the left of personal posts */
+	.CommentPost.Post--by-actor {
+		border-left: solid @config-primary-color;
+	}
+	
+	/* Do not show like shadow */
+	footer.Post-footer {
+		box-shadow: none;
+		background-color: #fff0;
+	}
+	
+	/* Post response emoji position correction */
+	.Reactions .CommentPost--Reactions {
+		max-width: 160px !important;
+		left: -28% !important;
+	}
+	@media (max-width: 992px) {
+		.Reactions .CommentPost--Reactions{
+			left: auto !important;
+			right: 0 !important;
+		}
+	}
+	
+	/* Don't show vertical, in-stream ads, online users, forum statistics on all tabs */
+	.TagsPage .item-flagrow-ad,
+	.TagsPage .Flagrow-Ads-fake-poststream-item,
+	.TagsPage .item-onlineUsers,
+	.TagsPage .item-forumStatisticsWidget {
+		display: none !important;
+	}
+	
+	/* Member directory page optimization ↓ */
+	/* Member directory page, homepage load more button sizes */
+	.UserDirectoryList-loadMore .Button,
+	.DiscussionList-loadMore .Button {
+		width: 100%;
+	}
+	
+	/* Uniform recent visitor avatar size */
+	img.Avatar.lastUser-avatar {
+		width: 35px;
+		height: 35px;
+	}
+	fieldset.LastUsers ul li a span.lastUser-avatar {
+		width: 35px !important;
+	}
+	
+	/* Post content page optimization ↓ */
+	/* upload img post picture centered 100% display */
+	.Post .Post-body img.inline-image {
+		max-height: 420px;
+		max-width: 100%;
+		margin: 0;
+	}
+	
+	/* [img] Image minimum display width canceled */
+	.Post img.block-image {
+		min-width: auto !important;
+		margin: 0 !important;
+	}
+	
+	/* Video width follows post width */
+	video {
+		max-width: -webkit-fill-available;
+	}
+	
+	/* BBBBCode popup window width */
+	.popcontainer {
+		width: auto;
+	}
+	
+	/* Added Steam-style shady */
+	.steam_spoiler {
+		color: #000000;
+		background-color: #000000;
+		padding: 0px 8px;
+	}
+	.steam_spoiler:hover {
+		color: #FFF;
+	}
+	
+	/* Personal homepage optimization ↓ */
+	/* Information card layout */
+	.UserCard-info>li {
+		/* Line wrap display */
+		display: block;
+	}
+	li.item-lastSeen,
+	li.item-joined,
+	li.item-fab,
+	li.item-profile-views,
+	li.item-money,
+	li.social-button,
+	li.item-settings.social-button {
+		/* Last online, registration time, social link, one line display */
+		display: inline-block !important;
+	}
+	
+	/* user status */
+	.ClarkWinkelmannStatus {
+		margin-top: 15px;
+	}
+	
+	
+
+	/* Overall situation ↓ */
+	/* Font */
+	html body {
+		font-family: sans-serif, Roboto, Helvetica, Arial, system-ui, -apple-system, BlinkMacSystemFont, 'System Emoji', "Segoe UI", Ubuntu, Cantarell, Oxygen, Helvetica, 'System SC', 'System Latin';
+	}
+
+	/* Hide text editor MD picture button */
+	#MarkdownToolbar button[title="Add an image"],
+	#MarkdownToolbar button[title="图片"],
+	#MarkdownToolbar button[title="新增圖片"],
+	#MarkdownToolbar button[title="画像を追加"] {
+		display: none;
+	}
+
+	/* Hide text editor native emoji selector */
+	.TextEditor-toolbar button[data-original-title="表情"],
+	.TextEditor-toolbar button[data-original-title="插入表情符號"],
+	.TextEditor-toolbar button[data-original-title="Insert emoji"] {
+		display: none;
+	}
+
+	/* Menu bar LOGO left notification button */
+	#Announce {
+		position: fixed !important;
+	}
+	.Announce--Show.fas.fa-bullhorn.false {
+		color: #f00 !important;
+	}
+	i.Announce--Show.fas.fa-bullhorn {
+		border-radius: 50%;
+		box-shadow: 0 0 0 0 rgba(90, 153, 212, 0.5);
+		animation: announce-pulse 1.5s 2;
+	}
+	@keyframes announce-pulse {
+		0% {
+			transform: scale(0.9);
+		}
+
+		70% {
+			transform: scale(1);
+			box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
+		}
+
+		100% {
+			transform: scale(0.9);
+			box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+		}
+	}
+
+	/* Dark Mode Optimization */
+	body.dark .PostUser-bar.PostUser-bar--empty {
+		background: #1b2028;
+	}
+
+	body.dark select.Select-input.FormControl {
+		background: #1b2028;
+	}
+
+	body.dark a.PostMention {
+		background: #232a35;
+	}
+	body.dark i.fa.fa-chevron-up {
+		color: #FFF;
+	}
+	
+	/* Mobile optimization ↓ */
+	/* Show draft button on mobile phone */
+	@media (max-width: 767px) {
+		.normal .ComposerBody-header>li:first-child {
+			margin-left: 75px;
+			margin-right: 75px;
+		}
+	
+		.Composer:not(.minimized) .Composer-controls li.item-save-draft {
+			display: block;
+			position: absolute !important;
+			z-index: 1001;
+			top: 0 !important;
+			left: 35px;
+	
+			>.Button {
+				height: 46px;
+				padding: 13px !important;
+			}
+		}
+	
+		/* On the mobile terminal, hide the Send All Mail button in the member directory, and load more buttons on the home page. Default width */
+		.IndexPage-toolbar-action li.item-kilowhat-mailing {
+			display: none;
+		}
+	
+		.DiscussionList-loadMore .Button {
+			width: auto;
+		}
+	}
+	/* mobile */
+	@media(max-width:1000px) {
+	
+		/* Mobile terminal does not show online users, Google vertical ads */
+		.item-onlineUsers,
+		.item-flagrow-ad {
+			display: none !important;
+		}
+	
+		.RankingPage.sideNavOffset {
+			/* The Ranks outermost div */
+			width: 100%;
+			margin-left: 0;
+		}
+	
+		nav.TagsPage-nav.IndexPage-nav.sideNav {
+			display: none;
+		}
+	
+		/* Forum statistics are not displayed on the mobile phone */
+		.item-forumStatisticsWidget {
+			display: none !important;
+		}
+	
+		/* Hide the y scroll axis of the tab bar at 1000 width */
+	
+		nav.IndexPage-nav.sideNav {
+			overflow-y: hidden;
+		}
+	}
+	/* Navigation bar at the bottom of the mobile phone */
+	.DiscussionList:not(.DiscussionList--searchResults) .read .DiscussionListItem-title {
+		color: #000 !important;
+	}
+	.ComposerBody-header h3 {
+		margin: 0;
+		line-height: 1.5em;
+		color: #000 !important;
+	}
+	.PollOption-active {
+		background-color: #49b4e6 !important;
+	}
+	@media(max-width: 500px) {
+		.mobile-app-icon-bar {
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-justify-content: space-around;
+			-ms-flex-pack: distribute;
+			justify-content: space-around;
+			background: none;
+			position: sticky;
+			bottom: 0;
+			width: 100%;
+			height: 48px;
+			z-index: 2;
+			/*border: 1px solid #fff !important;*/
+		}
+		/* addthis 上移 */
+		.at-expanding-share-button[data-position=bottom-right] {
+		    bottom: 58px !important;
+		}
+		.scroll-up {
+		    bottom: 108px;
+		}
+	}
+	.buttonstyle.active {
+		color: #fff !important;
+	}
+	.buttonstyle {
+		width: 100%;
+		height: 100%;
+		display: block;
+		flex-direction: column;
+		align-items: center;
+		background: #E7672E !important;
+		color: #ffffff !important;
+		border: none;
+		margin-top: 4px;
+	}
+	.spanstyle {
+		font-size: 10px;
+		margin-top: 5px;
+	}
+	.mobile-app-icon-bar button {
+		padding: 0.75rem !important;
+		cursor: pointer;
+	}
+	.mobile-app-icon-bar button svg,
+	.mobile-app-icon-bar button i,
+	.mobile-app-icon-bar button img {}
+	@media(min-width: 800px) {
+		.mobile-app-icon-bar {
+			display: none !important;
+		}
+	}

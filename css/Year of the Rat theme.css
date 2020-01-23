@@ -1,0 +1,394 @@
+/* Year of the Rat theme */
+/* PC side */
+@media (min-width: 768px){
+	/* Home page ↓ */
+	/* Hero Banner */
+	.Hero {
+	    background-color: #ffffff70;
+		color: #000000;
+		/* opacity: 0.5; */
+	}
+	.Hero h2{
+		font-weight: bolder;
+	}
+	/* Remove the top border of the banner */
+	.App-content {
+	    border-top: none;
+	}
+	/* Loading */
+	div#flarum-loading {
+	    color: white;
+	    text-shadow: 0px 0px 2px white;
+	}
+	/* Loading prompt */
+	.spinner div{
+		box-shadow: 0 0 2px white;
+	}
+	/* Tips when there is nothing */
+	.Placeholder p {
+	    color: white;
+	    text-shadow: 0 0 1px white;
+	}
+	
+	/* Chinese new year background */
+	/* Middle background */
+	div#app{
+		background-color: #e36c82;
+		background-image: radial-gradient(circle at 10% 0%, #e05972, rgba(255, 255, 255, 0) 100%),
+		radial-gradient(circle at left bottom, #ee9f8e, rgba(255, 255, 255, 0) 100%);
+	}
+	/* Xiang yun */
+	.lantern{
+		z-index: 0;
+		position: sticky;
+	}
+	i.lantern1 {
+		background-image: url(https://cdn.jsdelivr.net/gh/Littlegolden/CDN/img/xiangYun.svg);
+		position: absolute;
+		background-repeat: no-repeat;
+		display: block;
+		width: 200px;
+		height: 200px;
+		right: 10%;
+		top: 2.25rem;	
+		transform: rotate(-15deg);
+		opacity: 0.2;
+	}
+	i.lantern2 {
+		background-image: url(https://cdn.jsdelivr.net/gh/Littlegolden/CDN/img/xiangYun.svg);
+		position: absolute;
+		background-repeat: no-repeat;
+		display: block;
+		width: 200px;
+		height: 200px;
+		transform: rotate(58deg);
+		opacity: 0.2;
+		top: 40rem;
+		left: -0.9375rem;
+	}
+	i.lantern3{
+		background-image: url(https://cdn.jsdelivr.net/gh/Littlegolden/CDN/img/xiangYun.svg);
+		position: fixed;
+		background-repeat: no-repeat;
+		display: block;
+		width: 200px;
+		height: 200px;
+		right: 0%;
+		bottom: -2.8125rem;
+		transform: rotate(-220deg);
+		opacity: 0.2;
+	}
+	/* Swing lantern */
+	.polaroid {
+		position: absolute;
+		left: 45%;
+		top: 22%;
+		width: 500px;
+		height: 500px;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+		-webkit-animation: swing 3.5s ease-in-out forwards infinite;
+		animation: swing 3.5s ease-in-out forwards infinite;
+		-webkit-transform-origin: 50% -10em;
+		transform-origin: 50% -10em;
+	}
+	
+	@-webkit-keyframes swing {
+		0% {
+			-webkit-transform: translateX(-50%) rotate(10deg);
+			transform: translateX(-50%) rotate(10deg);
+		}
+	
+		50% {
+			-webkit-transform: translateX(-50%) rotate(-10deg) skewX(5deg) skewY(-2deg) scale(1.1);
+			transform: translateX(-50%) rotate(-10deg) skewX(5deg) skewY(-2deg) scale(1.1);
+		}
+	
+		100% {
+			-webkit-transform: translateX(-50%) rotate(10deg);
+			transform: translateX(-50%) rotate(10deg);
+		}
+	}
+	
+	@keyframes swing {
+		0% {
+			-webkit-transform: translateX(-50%) rotate(10deg);
+			transform: translateX(-50%) rotate(10deg);
+		}
+	
+		50% {
+			-webkit-transform: translateX(-50%) rotate(-10deg) skewX(5deg) skewY(-2deg) scale(1.1);
+			transform: translateX(-50%) rotate(-10deg) skewX(5deg) skewY(-2deg) scale(1.1);
+		}
+	
+		100% {
+			-webkit-transform: translateX(-50%) rotate(10deg);
+			transform: translateX(-50%) rotate(10deg);
+		}
+	}
+	
+	.yaobai{
+		overflow: hidden;
+		position: sticky;
+		top: 0;
+	}
+	.dizi{
+		background: url(https://cdn.jsdelivr.net/gh/Littlegolden/CDN/img/20200121234221_01025Lantern.png) no-repeat;
+		display: block;
+		height: 800px;
+		width: 400px;
+		position: fixed;
+		top: -145px;
+		left: 10%;
+	}
+	
+	/* Tab bar, online users */
+	.sideNav .Dropdown--select,
+	.UserPage .sideNavOffset,
+	.item-onlineUsers {
+		display: block;
+		background: #fff;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		box-shadow: 0 1px 5px 0 rgba(151,158,181,.28)!important;
+		border-radius: 6px;
+	}
+	/* statistics */
+	li.item-forumStatisticsWidget, fieldset.LastUsers, .LastUsers legend {
+		background: #fff;
+		padding-left: 5px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		box-shadow: 0 1px 5px 0 rgba(151,158,181,.28);
+		border-radius: 6px;
+		box-sizing: content-box;
+	}
+	
+	/* Post */
+	.DiscussionListItem {
+		position: relative;
+		margin: 0;
+		padding: 0;
+		border-radius: 5px;
+		margin-top: 18px;
+	}
+	.DiscussionListItem-main .DiscussionListItem-info .item-excerpt {
+		color: #191919 !important;
+		text-shadow: 0px 0px 5px white;
+	}
+	.DiscussionPage .CommentPost {
+		border-radius: 8px;
+		margin-top: 20px;
+		box-shadow: 0 4px 30px 0 rgba(0,0,0,0.1);
+		background: #fff;
+	}
+	/* Post count */
+	.App-header .Button, .App-header .Button:hover{
+		color: white;
+	}
+	.IndexPage .DiscussionListItem-count, .App-header .Button--link, .App-header .Search-input{
+		color: white;
+	}
+	/*  */
+	.DiscussionListItem-controls {
+		z-index: 99;
+	}
+	/* Post Avatar */
+	.DiscussionListItem-content img.Avatar, .DiscussionListItem-content span.Avatar{
+		border: 2px solid #fff2ae;
+	}
+	/* Post div Chinese New Year Lantern */
+	.IndexPage .DiscussionListItem:before {
+		content: '';
+		position: absolute;
+		background-image: url('https://cdn.jsdelivr.net/gh/Littlegolden/CDN/img/Lantern_Shadow_69x186.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		z-index: 1;
+		display: block;
+		width: 46px;
+		height: 100%;
+		left: -14px;
+		top: 1px;
+	}
+	.IndexPage .DiscussionListItem:after {
+		content: '';
+		position: absolute;
+		background-image: url('https://cdn.jsdelivr.net/gh/Littlegolden/CDN/img/Lantern_Shadow_69x186_r.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		z-index: 1;
+		display: block;
+		width: 46px;
+		height: 100%;
+		top: 1px;
+		right: -10px;
+	}
+	.IndexPage .DiscussionListItem:hover{
+		background: none;
+	}
+	.IndexPage .IndexPage-results .DiscussionListItem-content {
+		padding-left: 80px;
+		padding-right: 80px;
+		padding-top: 0;
+		border-radius: 25px;
+		border: 3px solid #f9bd89;
+		box-shadow: 0px 1px 1px #c68045 inset, 0px 1px 2px #861e25, 0px 5px 5px rgba(90, 90, 90, 0.4);
+		background-color: #ed4e60;
+		background-image: 
+			radial-gradient(circle at left bottom, #c23b41 0%, rgba(255, 255, 255, 0) 100%),
+			radial-gradient(circle at right bottom, #c23b41 5%, rgba(255, 255, 255, 0) 100%),
+			radial-gradient(circle at bottom, #c23b41 5%, rgba(255, 255, 255, 0) 100%);
+	}
+	.IndexPage .DiscussionListItem-content:hover{
+		background-image: 
+			radial-gradient(circle at left bottom, #9c181d 0%,rgba(255,255,255,0) 100%),
+			radial-gradient(circle at right bottom, #ad252b 5%, rgba(255,255,255,0) 100%),
+			radial-gradient(circle at bottom, #d64d53 5%, rgba(255,255,255,0) 100%);
+	}
+	.IndexPage h3.DiscussionListItem-title{
+		font-weight: bolder;
+		color: #feff9e;
+		text-shadow: 0px 2px 5px #52050d;
+	}
+	.IndexPage .DiscussionList:not(.DiscussionList--searchResults) .read .DiscussionListItem-title {
+		color: #ffd9ac !important;
+		text-shadow: 0px 2px 8px #901e1e;
+	}
+	.IndexPage ul.DiscussionListItem-info{
+		color:#e8e8e8;
+	}
+	
+	/* Button */
+	.IndexPage-toolbar .Button, .DiscussionList-loadMore .Button {
+		background-color: #ffd7ac;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3686274509803922);
+		color: #191919;
+	}
+	.IndexPage-nav .item-newDiscussion .Button, .IndexPage .SubscriptionMenu{
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3686274509803922);
+	}
+	
+	/* User Directory Page ↓ */
+	.IndexPage .sideNavOffset {
+	    z-index: 2;
+	}
+	
+	/* Post content page ↓ */
+	/* Information scroll bar on the right side of the post */
+	.Scrubber-handle{
+		background: none;
+	}
+	.Scrubber a, .Scrubber-description{
+		color: white;
+	}
+	.CommentPost.Post--by-actor { /* Personal post left line */
+		border-left: solid #ffffff;
+	}
+	/* Best answer */
+	li.item-bestAnswerPost .CommentPost {
+		padding: 5px;
+		margin-top: 0;
+	}
+	/* Google Ad Text Tips */
+	.Flagrow-Ads-between-posts p{
+		text-shadow: 1px 1px 1px white, 1px -1px 1px white, -1px 1px 1px white, -1px -1px 1px white;
+	}
+	.EventPost, .DiscussionPage-stream .ReplyPlaceholder, .DiscussionPage-stream .PostStream-timeGap{
+		text-shadow: 1px 1px 1px white, 1px -1px 1px white, -1px 1px 1px white, -1px -1px 1px white;
+	}
+	
+	/* Homepage ↓ */
+	.UserPage .UserCard-profile { /* Social card */
+		text-shadow: 0px 0px 4px white;
+	}
+	.sideNavOffset.UserPage-content { /* Reply list */
+		z-index: 1;
+	}
+	.UserPage .DiscussionList-discussions {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		position: relative;
+	}
+	.UserPage ul.DiscussionList-discussions>li:not(:last-child){
+		border-bottom: 1px solid #eaedf1;
+		margin: 15px 0;
+	}
+	.UserPage .DiscussionListItem-content{
+		margin-bottom: 15px;
+	}
+	
+	/* overall situation */
+	/* Avatar pendant */
+	.UserPage .Hero .UserCard-avatar:before {/* User Homepage */
+		content: "";
+		background: url(https://cdn.jsdelivr.net/gh/Littlegolden/CDN/img/ratHat_156x106.png)no-repeat;
+		display: block;
+		background-size: cover;
+		width: 8.875rem;
+		height: 6.125rem;
+		position: absolute;
+		background-repeat: no-repeat;
+		top: -0.625rem;
+		left: -1.4375rem;
+	}
+	.IndexPage .DiscussionListItem-author:before { /* Homepage stream avatar */
+		content: "";
+		background: url(https://cdn.jsdelivr.net/gh/Littlegolden/CDN/img/ratHat_66x45.png)no-repeat;
+		display: block;
+		background-size: cover;
+		width: 60px;
+		height: 40px;
+		position: absolute;
+		background-repeat: no-repeat;
+		z-index: 1;
+		top: 8px;
+		left: 17px;
+	}
+	.DiscussionListItem-badges .Badge {/* Show over hat */
+		z-index: 2;
+	}
+	fieldset>ul>li { /* User Page's visitor List */
+		position: relative;
+	}
+	fieldset.LastUsers li:before {
+		content: "";
+		background: url(https://cdn.jsdelivr.net/gh/Littlegolden/CDN/img/ratHat_66x45.png)no-repeat;
+		display: flex;
+		background-size: cover;
+		width: 52px;
+		height: 35px;
+		position: absolute;
+		background-repeat: no-repeat;
+		z-index: 1;
+		top: -5px;
+		left: -9px;
+	}
+	.DiscussionPage .PostUser:before {/* Discussion page */
+		content: "";
+		background: url(https://cdn.jsdelivr.net/gh/Littlegolden/CDN/img/ratHat_113x77.png)no-repeat;
+		display: block;
+		background-size: cover;
+		width: 102px;
+		height: 70px;
+		position: absolute;
+		background-repeat: no-repeat;
+		z-index: 1;
+		top: -10px;
+		left: -103px;
+	}
+	.DiscussionPage .PostUser-badges .Badge { /* User group identification goes up */
+		margin-left: -10px;
+		position: relative;
+		pointer-events: auto;
+		z-index: 2;
+	}
+	.DiscussionPage .item-bestAnswerPost .PostUser:before { /* Not shown Rat Hat before the best answer */
+		content: "";
+		background: none;
+	}
+
+}
