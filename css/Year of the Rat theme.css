@@ -410,7 +410,7 @@
 }
 
 /* z-index setting */
-@media(max-width: 500px) {
+@media (min-width: 500px) {
 	.lantern{
 		z-index: 0;
 	}
@@ -429,5 +429,16 @@
 	}
 	.DiscussionListItem-controls {
 		z-index: 99;
+	}
+}
+@media (max-width: 1400px) and (min-width: 768px){
+	.IndexPage .sideNavContainer,
+	.UserPage .UserCard-profile {
+	    position: relative;
+	}
+}
+@media (max-width: 991px) and (min-width: 768px){
+	nav.IndexPage-nav.sideNav {
+	    position: relative;
 	}
 }
