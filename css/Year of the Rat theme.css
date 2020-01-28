@@ -184,14 +184,26 @@
 		box-shadow: 0 4px 30px 0 rgba(0,0,0,0.1);
 		background: #fff;
 	}
-	/* Post count */
-	.App-header .Button, .App-header .Button:hover{
+	/* Post count， title bar */
+	.App-header .Button{
 		color: white;
 	}
 	.IndexPage .DiscussionListItem-count, .App-header .Button--link, .App-header .Search-input{
 		color: white;
 	}
-	/*  */
+	.App-header .Button:hover{
+		color: white;
+		text-shadow: 0 0 2px white;
+	}
+	.NotificationList-header .Button:hover{
+		color: #af353b;
+	}
+		/* Prevent the above adjustment from affecting "All read button colors" */
+		.NotificationList-header .Button {
+		    color: #667d99;
+		}
+	
+	/*  Post Setting Button*/
 	.DiscussionListItem-controls {
 		z-index: 99;
 	}
@@ -299,6 +311,10 @@
 	.EventPost, .DiscussionPage-stream .ReplyPlaceholder, .DiscussionPage-stream .PostStream-timeGap{
 		text-shadow: 1px 1px 1px white, 1px -1px 1px white, -1px 1px 1px white, -1px -1px 1px white;
 	}
+		/* Prevent the above adjustment from affecting the "Tips when adding tags" */
+		.DiscussionTaggedPost .TagsLabel{
+			text-shadow: none;
+		}
 	
 	/* Homepage ↓ */
 	.UserPage .UserCard-profile { /* Social card */
@@ -391,4 +407,27 @@
 		background: none;
 	}
 
+}
+
+/* z-index setting */
+@media(max-width: 500px) {
+	.lantern{
+		z-index: 0;
+	}
+	.IndexPage .DiscussionListItem:before,
+	.IndexPage .DiscussionListItem:after,
+	.sideNavOffset.UserPage-content,
+	.IndexPage .DiscussionListItem-author:before,
+	fieldset.LastUsers li:before,
+	.DiscussionPage .PostUser:before{
+		z-index: 1;
+	}
+	.IndexPage .sideNavOffset,
+	.DiscussionListItem-badges .Badge,
+	.DiscussionPage .PostUser-badges .Badge{
+	    z-index: 2;
+	}
+	.DiscussionListItem-controls {
+		z-index: 99;
+	}
 }
