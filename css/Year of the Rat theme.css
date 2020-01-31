@@ -430,22 +430,19 @@
 	.DiscussionListItem-controls {
 		z-index: 99;
 	}
-}
-@media (max-width: 991px) and (min-width: 500px){
 	.IndexPage .sideNavContainer,
-	.UserPage .UserCard-profile,
+	.sideNavOffset.UserPage-content,
+	.UserPage .UserCard-profile{
+		position: relative;
+	}
+}
+/* Rat Hat position fix */
+@media (max-width: 991px) and (min-width: 500px){
 	nav.IndexPage-nav.sideNav{
 	    position: relative;
 	}
-}
-@media (max-width: 1400px) and (min-width: 768px){
-	.IndexPage .sideNavContainer,
-	.UserPage .UserCard-profile {
-	    position: relative;
-	}
-}
-@media (max-width: 991px) and (min-width: 768px){
-	nav.IndexPage-nav.sideNav {
-	    position: relative;
+	.UserPage nav.sideNav.UserPage-nav{
+		position: relative;
+		overflow-y: hidden;
 	}
 }
