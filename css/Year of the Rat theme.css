@@ -431,6 +431,13 @@
 		z-index: 99;
 	}
 }
+@media (max-width: 991px) and (min-width: 500px){
+	.IndexPage .sideNavContainer,
+	.UserPage .UserCard-profile,
+	nav.IndexPage-nav.sideNav{
+	    position: relative;
+	}
+}
 @media (max-width: 1400px) and (min-width: 768px){
 	.IndexPage .sideNavContainer,
 	.UserPage .UserCard-profile {
