@@ -432,11 +432,11 @@
 	}
 	.IndexPage .sideNavContainer,
 	.sideNavOffset.UserPage-content,
-	.UserPage .UserCard-profile{
+	.UserPage .UserCard-profile{ /* Rat hat positon fix etc. */
 		position: relative;
 	}
 }
-/* Rat Hat position fix */
+/* z-index setting */
 @media (max-width: 991px) and (min-width: 500px){
 	nav.IndexPage-nav.sideNav{
 	    position: relative;
