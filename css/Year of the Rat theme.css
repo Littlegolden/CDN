@@ -432,6 +432,9 @@
 	.UserPage .UserCard-profile{ /* Rat hat positon fix etc. */
 		position: relative;
 	}
+	.UserPage .UserCard-controls{ /* 用户资料设置按钮 */
+		z-index: 1;
+	}
 }
 /* z-index setting */
 @media (max-width: 991px) and (min-width: 500px){
