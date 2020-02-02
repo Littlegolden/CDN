@@ -52,7 +52,7 @@
 	
 	/* Discussion page optimization ↓ */
 	/* Highlight on the left of personal posts */
-	.CommentPost.Post--by-actor {
+	.DiscussionPage.CommentPost.Post--by-actor {
 		border-left: solid @config-primary-color;
 	}
 	
