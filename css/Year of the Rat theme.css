@@ -296,9 +296,6 @@
 	.Scrubber a, .Scrubber-description{
 		color: white;
 	}
-	.CommentPost.Post--by-actor { /* Personal post left line */
-		border-left: solid #ffffff;
-	}
 	/* Best answer */
 	li.item-bestAnswerPost .CommentPost {
 		padding: 5px;
